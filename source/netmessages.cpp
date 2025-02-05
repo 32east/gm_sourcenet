@@ -923,14 +923,7 @@ namespace NetMessages
 
 	void CLC_ClientInfo::SetupLua( GarrysMod::Lua::ILuaBase *LUA )
 	{
-		NumberMember<CLC_ClientInfo, CRC32_t, &CLC_ClientInfo::SendTableCRC>( LUA, "SendTableCRC" );
-		NumberMember<CLC_ClientInfo, int32_t, &CLC_ClientInfo::ServerCount>( LUA, "ServerCount" );
-		BoolMember<CLC_ClientInfo, &CLC_ClientInfo::HLTV>( LUA, "HLTV" );
-		NumberMember<CLC_ClientInfo, uint32_t, &CLC_ClientInfo::FriendsID>( LUA, "FriendsID" );
-		StringArrayMember<CLC_ClientInfo, 32, &CLC_ClientInfo::FriendsName>( LUA, "FriendsName" );
-		SetupAccessors(
-			LUA, "CustomFiles", CLC_ClientInfo_GetCustomFiles, CLC_ClientInfo_SetCustomFiles
-		);
+	
 	}
 
 	const char CLC_Move::Name[] = "clc_Move";
