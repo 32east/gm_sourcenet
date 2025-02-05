@@ -32,7 +32,6 @@ jobs:
     - name: Make
       run: |
         cd projects/linux/gmake
-        make
         make config=release_x86
         ls
     - name: Upload Linux Build Artifacts
